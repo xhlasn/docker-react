@@ -6,6 +6,6 @@ services:
 before_install:
   - docker build -t xhlasn/doker-react -f Dockerfile.dev .
 script:
-  #- docker run xhlasn/docker-react npm run test -- --coverage
-  - docker run -e CI=true xhlasn/docker-react npm run test
+  - docker run xhlasn/docker-react npm run test -- --coverage
+  #- docker run -e CI=true xhlasn/docker-react npm run test
 
